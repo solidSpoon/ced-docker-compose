@@ -1,0 +1,12 @@
+services:
+  audiobookshelf:
+    image: ghcr.io/advplyr/audiobookshelf:latest
+    ports:
+      - 13378:80
+    volumes:
+      - /Users/solidspoon/audiobookshelf/audiobooks:/audiobooks
+      - /Users/solidspoon/audiobookshelf/podcasts:/podcasts
+      - /Users/solidspoon/audiobookshelf/config:/config
+      - /Users/solidspoon/audiobookshelf/metadata:/metadata
+    environment:
+      - TZ=America/Toronto
